@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+   <input type="date" id="cal" /> 
+   <button id=""  onclick="age();" >Click</button>
+  <script>
+     function age(){
+
+     var input = document.getElementById("cal").value;  
+	 
+	 
+     // convert user input value into date object
+	 
+	 var birth = new Date(input);
+	 
+	 
+	 // get difference from current date;
+	 
+	 var difference= Date.now() - birth.getTime(); 
+	 	 
+	 var  ageDate = new Date(difference); 
+	 var calculatedAge=   Math.abs(ageDate.getUTCFullYear() - 1970);
+	 alert(calculatedAge);
+}
+
+	
+  </script>
+</body>
+</html>
